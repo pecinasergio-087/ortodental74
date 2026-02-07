@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ortodental 74 - Clínica Dental de Alta Especialidad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        babyBlue: '#A1CAF1',
+                        aliceBlue: '#F0F8FF',
+                        steelBlue: '#4682B4',
+                        lightPink: '#FFE0FF',
+                        darkBlue: '#2c5282',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-overlay {
+            background: linear-gradient(rgba(161, 202, 241, 0.3), rgba(70, 130, 180, 0.4));
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(161, 202, 241, 0.3);
+        }
+        .btn-primary {
+            background-color: #4682B4;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #A1CAF1;
+            color: #2c5282;
+        }
+        .btn-accent {
+            background-color: #FFE0FF;
+            color: #4682B4;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-accent:hover {
+            background-color: #fff;
+            color: #4682B4;
+            box-shadow: 0 4px 12px rgba(255, 224, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-aliceBlue text-gray-700">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-32">
+                <div class="flex-shrink-0 flex items-center">
+                    <img class="h-28 w-auto" src="logo.png" alt="Ortodental 74 Logo">
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#inicio" class="text-steelBlue hover:text-babyBlue font-medium transition">Inicio</a>
+                    <a href="#nosotros" class="text-steelBlue hover:text-babyBlue font-medium transition">Nosotros</a>
+                    <a href="#servicios" class="text-steelBlue hover:text-babyBlue font-medium transition">Servicios</a>
+                    <a href="#testimonios" class="text-steelBlue hover:text-babyBlue font-medium transition">Pacientes</a>
+                    <a href="#contacto" class="btn-accent px-6 py-2 rounded-full shadow-sm">Agendar Cita</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-steelBlue hover:text-babyBlue focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#inicio" class="block px-3 py-2 text-steelBlue hover:bg-aliceBlue rounded-md">Inicio</a>
+                <a href="#nosotros" class="block px-3 py-2 text-steelBlue hover:bg-aliceBlue rounded-md">Nosotros</a>
+                <a href="#servicios" class="block px-3 py-2 text-steelBlue hover:bg-aliceBlue rounded-md">Servicios</a>
+                <a href="#testimonios" class="block px-3 py-2 text-steelBlue hover:bg-aliceBlue rounded-md">Pacientes</a>
+                <a href="#contacto" class="block px-3 py-2 text-steelBlue hover:bg-aliceBlue rounded-md font-bold">Agendar Cita</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="hero_bg.png" alt="Clínica Dental Moderna" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto" data-aos="fade-up">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-md">
+                Sonrisas que <span class="text-lightPink">Iluminan</span> tu Vida
+            </h1>
+            <p class="text-xl md:text-2xl text-white mb-10 font-light drop-shadow-sm">
+                Odontología de alta especialización en un ambiente diseñado para tu tranquilidad.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#contacto" class="bg-lightPink text-steelBlue font-bold py-3 px-8 rounded-full shadow-lg hover:bg-white transition transform hover:scale-105">
+                    Reserva tu Consulta
+                </a>
+                <a href="#servicios" class="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-steelBlue transition">
+                    Nuestros Servicios
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2 relative">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-babyBlue rounded-full opacity-20"></div>
+                    <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-lightPink rounded-full opacity-30"></div>
+                    <img src="doctor.png" alt="Dra. Especialista" class="relative rounded-2xl shadow-xl w-full object-cover h-[600px]">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h4 class="text-steelBlue font-semibold tracking-wide uppercase mb-2">Sobre Nosotros</h4>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Excelencia y Calidez en <span class="text-babyBlue">Ortodental 74</span></h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        En Ortodental 74, fusionamos la tecnología más avanzada con un trato humano y personalizado. Entendemos que cada sonrisa es única, por eso nuestra clínica está diseñada para ofrecerte una experiencia relajante y exclusiva.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Liderados por especialistas apasionados por la estética y la salud dental, nos dedicamos a transformar vidas a través de sonrisas saludables y radiantes. Tu bienestar es nuestra prioridad absoluta.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-babyBlue mr-3"></i> Tecnología de vanguardia
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-babyBlue mr-3"></i> Atención personalizada y suave
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-babyBlue mr-3"></i> Ambiente estéril y seguro
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 bg-aliceBlue relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-steelBlue mb-4">Nuestros Servicios Exclusivos</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Soluciones integrales diseñadas para perfeccionar tu salud y estética dental.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center transition duration-300">
+                    <div class="w-16 h-16 bg-aliceBlue rounded-full flex items-center justify-center mx-auto mb-6 text-steelBlue">
+                        <i class="fas fa-teeth text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Ortodoncia Avanzada</h3>
+                    <p class="text-gray-500 text-sm mb-4">Brackets estéticos y alineadores invisibles para una sonrisa perfectamente alineada sin interrumpir tu estilo de vida.</p>
+                    <a href="#" class="text-babyBlue font-semibold hover:text-steelBlue text-sm">Saber más <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center transition duration-300">
+                    <div class="w-16 h-16 bg-aliceBlue rounded-full flex items-center justify-center mx-auto mb-6 text-steelBlue">
+                        <i class="fas fa-magic text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Diseño de Sonrisa</h3>
+                    <p class="text-gray-500 text-sm mb-4">Carillas de porcelana y resina de alta estética para transformar la forma, color y tamaño de tus dientes.</p>
+                    <a href="#" class="text-babyBlue font-semibold hover:text-steelBlue text-sm">Saber más <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center transition duration-300">
+                    <div class="w-16 h-16 bg-aliceBlue rounded-full flex items-center justify-center mx-auto mb-6 text-steelBlue">
+                        <i class="fas fa-gem text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Blanqueamiento Premium</h3>
+                    <p class="text-gray-500 text-sm mb-4">Tecnología láser para aclarar varios tonos en una sola sesión, con mínima sensibilidad y máximos resultados.</p>
+                    <a href="#" class="text-babyBlue font-semibold hover:text-steelBlue text-sm">Saber más <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+
+                 <!-- Service 4 -->
+                 <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center transition duration-300">
+                    <div class="w-16 h-16 bg-aliceBlue rounded-full flex items-center justify-center mx-auto mb-6 text-steelBlue">
+                        <i class="fas fa-child text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Odontopediatría</h3>
+                    <p class="text-gray-500 text-sm mb-4">Cuidado especializado para los más pequeños en un ambiente divertido y libre de estrés.</p>
+                    <a href="#" class="text-babyBlue font-semibold hover:text-steelBlue text-sm">Saber más <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+
+                 <!-- Service 5 -->
+                 <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center transition duration-300">
+                    <div class="w-16 h-16 bg-aliceBlue rounded-full flex items-center justify-center mx-auto mb-6 text-steelBlue">
+                        <i class="fas fa-notes-medical text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Implantes Dentales</h3>
+                    <p class="text-gray-500 text-sm mb-4">Recupera la funcionalidad y estética completa de tu boca con implantes de titanio de la más alta calidad.</p>
+                    <a href="#" class="text-babyBlue font-semibold hover:text-steelBlue text-sm">Saber más <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+
+                 <!-- Service 6 -->
+                 <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center transition duration-300">
+                    <div class="w-16 h-16 bg-aliceBlue rounded-full flex items-center justify-center mx-auto mb-6 text-steelBlue">
+                        <i class="fas fa-heartbeat text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Salud Periodontal</h3>
+                    <p class="text-gray-500 text-sm mb-4">Prevención y tratamiento de enfermedades de las encías para mantener una base sólida para tu sonrisa.</p>
+                    <a href="#" class="text-babyBlue font-semibold hover:text-steelBlue text-sm">Saber más <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature/Smile Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-babyBlue rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+                <div class="md:w-1/2 relative h-64 md:h-auto">
+                    <img src="smile.png" alt="Sonrisa Perfecta" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="md:w-1/2 p-10 md:p-16 flex flex-col justify-center bg-gradient-to-br from-babyBlue to-steelBlue text-white">
+                    <h3 class="text-3xl font-bold mb-4">Tu Nueva Sonrisa Comienza Aquí</h3>
+                    <p class="mb-8 text-blue-50 opacity-90">
+                        Utilizamos tecnología digital para planificar tu tratamiento con precisión milimétrica. Visualiza tu resultado final antes de comenzar.
+                    </p>
+                    <div class="flex gap-4">
+                        <div class="text-center">
+                            <span class="block text-3xl font-bold text-lightPink">30+</span>
+                            <span class="text-sm opacity-80">Años de Exp.</span>
+                        </div>
+                        <div class="w-px bg-white opacity-30"></div>
+                        <div class="text-center">
+                            <span class="block text-3xl font-bold text-lightPink">5k+</span>
+                            <span class="text-sm opacity-80">Pacientes Felices</span>
+                        </div>
+                        <div class="w-px bg-white opacity-30"></div>
+                        <div class="text-center">
+                            <span class="block text-3xl font-bold text-lightPink">100%</span>
+                            <span class="text-sm opacity-80">Garantía</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (NEW) -->
+    <section id="testimonios" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-steelBlue mb-4">Lo que dicen nuestros pacientes</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Historias reales de sonrisas transformadas.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-aliceBlue p-8 rounded-2xl shadow-sm border border-gray-100 relative">
+                    <i class="fas fa-quote-left text-4xl text-babyBlue opacity-30 absolute top-6 left-6"></i>
+                    <p class="text-gray-600 mb-6 mt-8 italic">"La atención de la Dra. es increíble. Me sentí muy cómoda y el resultado de mi diseño de sonrisa superó mis expectativas. ¡Gracias Ortodental 74!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-steelBlue rounded-full flex items-center justify-center text-white font-bold">MC</div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-800">María C.</h4>
+                            <p class="text-sm text-babyBlue">Diseño de Sonrisa</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-aliceBlue p-8 rounded-2xl shadow-sm border border-gray-100 relative">
+                    <i class="fas fa-quote-left text-4xl text-babyBlue opacity-30 absolute top-6 left-6"></i>
+                    <p class="text-gray-600 mb-6 mt-8 italic">"Llevo a mis hijos aquí y les encanta. El ambiente es muy relajado y el trato es excelente. Totalmente recomendado para familias."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-lightPink rounded-full flex items-center justify-center text-steelBlue font-bold">JL</div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-800">Jorge L.</h4>
+                            <p class="text-sm text-babyBlue">Odontopediatría</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-aliceBlue p-8 rounded-2xl shadow-sm border border-gray-100 relative">
+                    <i class="fas fa-quote-left text-4xl text-babyBlue opacity-30 absolute top-6 left-6"></i>
+                    <p class="text-gray-600 mb-6 mt-8 italic">"Profesionalismo puro. Me realizaron un implante y no sentí dolor alguno. La recuperación fue rápida y el seguimiento excelente."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-steelBlue rounded-full flex items-center justify-center text-white font-bold">AR</div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-800">Ana R.</h4>
+                            <p class="text-sm text-babyBlue">Implantes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-aliceBlue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-steelBlue mb-4">Contáctanos</h2>
+                <p class="text-gray-600">Estamos listos para atenderte. Agenda tu cita hoy mismo.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <form>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Nombre</label>
+                                <input class="w-full px-4 py-3 rounded-lg bg-aliceBlue border border-gray-200 focus:border-babyBlue focus:outline-none transition" id="name" type="text" placeholder="Tu nombre">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">Teléfono</label>
+                                <input class="w-full px-4 py-3 rounded-lg bg-aliceBlue border border-gray-200 focus:border-babyBlue focus:outline-none transition" id="phone" type="tel" placeholder="Tu teléfono">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Correo Electrónico</label>
+                            <input class="w-full px-4 py-3 rounded-lg bg-aliceBlue border border-gray-200 focus:border-babyBlue focus:outline-none transition" id="email" type="email" placeholder="tucorreo@ejemplo.com">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Mensaje</label>
+                            <textarea class="w-full px-4 py-3 rounded-lg bg-aliceBlue border border-gray-200 focus:border-babyBlue focus:outline-none transition h-32" id="message" placeholder="¿En qué podemos ayudarte?"></textarea>
+                        </div>
+                        <button class="w-full bg-steelBlue text-white font-bold py-3 px-4 rounded-lg hover:bg-babyBlue transition duration-300 shadow-md" type="button">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Info & Map -->
+                <div class="flex flex-col justify-between">
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-lightPink rounded-full flex items-center justify-center text-steelBlue flex-shrink-0 mt-1">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-xl font-bold text-gray-800">Ubicación</h4>
+                                <p class="text-gray-600">Av. Principal 123, Zona Médica<br>Ciudad, CP 12345</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-lightPink rounded-full flex items-center justify-center text-steelBlue flex-shrink-0 mt-1">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-xl font-bold text-gray-800">Llámanos</h4>
+                                <p class="text-gray-600">+52 (555) 123-4567<br>+52 (555) 987-6543</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-lightPink rounded-full flex items-center justify-center text-steelBlue flex-shrink-0 mt-1">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-xl font-bold text-gray-800">Escríbenos</h4>
+                                <p class="text-gray-600">citas@ortodental74.com<br>info@ortodental74.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Placeholder Map -->
+                    <div class="mt-8 bg-gray-200 rounded-2xl h-64 w-full overflow-hidden shadow-inner flex items-center justify-center text-gray-400">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.539568666666!2d-99.1686936850936!3d19.43260768688466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f8c9c9c9c9c9%3A0x1234567890abcdef!2sCiudad%20de%20M%C3%A9xico!5e0!3m2!1ses!2smx!4v1625000000000!5m2!1ses!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-steelBlue text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-2xl font-bold mb-2">ORTODENTAL 74</h2>
+                    <p class="text-blue-100 text-sm">Tu sonrisa, nuestra pasión.</p>
+                </div>
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#" class="text-white hover:text-lightPink transition text-2xl"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white hover:text-lightPink transition text-2xl"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white hover:text-lightPink transition text-2xl"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-blue-400 mt-8 pt-8 text-center text-blue-100 text-sm">
+                &copy; 2024 Ortodental 74. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
